@@ -1,14 +1,15 @@
 from replit import clear
-#HINT: You can call clear() to clear the output in the console.
 from art import logo
 
+## print a logo as the header
 print(logo)
 
-is_continue = True
+## create an empty dictionary to 
 bid_log = {}
 
+## Check who can get the highest bid
 def find_higest_bidder(bidding_record):
-  #bidding record = {"Tina": 42, "Eric": 20}
+  # For example: bidding record = {"Tina": 42, "Eric": 20}
   # when looping thru a dictionary, it also loops through the keys
   highest_bid = 0
   for bidder in bidding_record:
@@ -18,6 +19,8 @@ def find_higest_bidder(bidding_record):
       winner = bidder
   print(f"The winner is {winner} with a bid of ${highest_bid}.")  
 
+## Looping the questions
+is_continue = True  
 while is_continue:
   bid_name = input("What is your name: ")
   bid_money = int(input("What is your bid?: $"))
@@ -28,6 +31,7 @@ while is_continue:
     clear()
   else:
     is_continue = False
+    clear()
     find_higest_bidder(bid_log)
 
 
